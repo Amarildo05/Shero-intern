@@ -2,9 +2,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <link rel="icon" type="image/x-icon" href="" />
+    <title>PainfulPleasures</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.webp" />
     <link rel="stylesheet" href="/index.css" />
+    <link rel="stylesheet" href="/glide.core.min.css" />
+    <link rel="stylesheet" href="/glide.theme.min.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -21,8 +23,8 @@
           <button type="submit"><i class="fa fa-search"></i></button>
         </form>
         <a style="margin-left: 2%" href="#community">Community</a>
-        <a href="#account">Account</a>
-        <a href="#cart">Cart</a>
+        <a href="#account">Account <span>˅</span></a>
+        <a href="#cart">Cart <span>˅</span></a>
       </div>
       <div class="bottom-header">
         <img
@@ -31,17 +33,17 @@
           src="/images/Painful_Pleasures.webp"
           alt="Painful Pleasures"
         />
-        <a id="a2" href="#body">BODY JEWELERY</a>
-        <a id="a2" href="#piercing">PIERCING</a>
-        <a id="a2" href="#tatoo">TATTOO</a>
-        <a id="a2" href="#medical">MEDICAL</a>
-        <a id="a2" href="#studio">STUDIO</a>
-        <a id="a2" href="#peranent">PERMANENT MAKEUP</a>
+        <a id="a2" href="#body">BODY JEWELERY <span>˅</span></a>
+        <a id="a2" href="#piercing">PIERCING <span>˅</span></a>
+        <a id="a2" href="#tatoo">TATTOO <span>˅</span></a>
+        <a id="a2" href="#medical">MEDICAL <span>˅</span></a>
+        <a id="a2" href="#studio">STUDIO <span>˅</span></a>
+        <a id="a2" href="#peranent">PERMANENT MAKEUP <span>˅</span></a>
       </div>
       <hr />
     </header>
     <!-- HEADER -->
-    <!-- CONTENT -->
+    <!-- GRID IMAGES -->
     <div>
       <div class="grid">
         <img
@@ -61,7 +63,40 @@
         />
       </div>
     </div>
-    <!-- CONTENT -->
+    <!-- GRID IMAGES -->
+    <!-- CAROUSEL -->
+    <div class="carousel-section">
+      <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            <li class="glide__slide">
+              <img src="/images/slide-1.png" alt="slide-1" />
+            </li>
+            <li class="glide__slide">
+              <img src="/images/slide-2.png" alt="slide-2" />
+            </li>
+            <li class="glide__slide">
+              <img src="/images/slide-3.png" alt="slide-3" />
+            </li>
+            <li class="glide__slide">
+              <img src="/images/slide-4.png" alt="slide-4" />
+            </li>
+            <li class="glide__slide">
+              <img src="/images/slide-5.png" alt="slide-5" />
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- CAROUSEL -->
     <!-- FOOTER -->
     <footer>
       <div class="top-footer">
@@ -91,7 +126,13 @@
           <div class="bottom-title">GET IN-TOUCH</div>
           <a id="bottom-a" href="#number">410-712-0145</a>
           <a id="bottom-a" href="#gmail">support@painfulpleasures.com</a>
-          <a id="bottom-a" href="#logos">logos</a>
+          <div class="icons">
+            <a href="#facebook" id="bottom-a" class="fa fa-facebook"></a>
+            <a href="#twitter" id="bottom-a" class="fa fa-twitter"></a>
+            <a href="#instagram" id="bottom-a" class="fa fa-instagram"></a>
+            <a href="#youtube" id="bottom-a" class="fa fa-youtube"></a>
+            <a href="#pinterest" id="bottom-a" class="fa fa-pinterest"></a>
+          </div>
         </div>
         <div class="sections">
           <div class="bottom-title">SIGN UP TO OUR nEWSLETTER</div>
@@ -105,11 +146,26 @@
             "
           >
             <input type="text" placeholder="Newsletter Sign-Up" />
-            <button style="font-size: small; font-weight: bold;" type="submit">SUBMIT</button>
+            <button style="font-size: small; font-weight: bold" type="submit">
+              SUBMIT
+            </button>
           </form>
         </div>
       </div>
     </footer>
     <!-- FOOTER -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+      const option = {
+        type: "carousel",
+        perView: 4,
+        breakpoints: {
+          600: { perView: 1 },
+          900: { perView: 2 },
+          1200: { perView: 3 },
+        },
+      };
+      new Glide(".glide", option).mount();
+    </script>
   </body>
 </html>
