@@ -25,10 +25,10 @@
   border-color: rgba(255, 255, 255, 0.342);
 }
 .glide__arrow--left {
-  left: 2em;
+  left: 0.1em;
 }
 .glide__arrow--right {
-  right: 2em;
+  right: 0.1em;
 }
 .glide__arrow--disabled {
   opacity: 0.33;
